@@ -256,22 +256,22 @@ z-index: 1;
        box-sizing: border-box;
        overflow: hidden;
      }
-                    #unscramble { 
-      white-space: pre-wrap; 
-      font-size: 2.2rem;
-      line-height: 1.5;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      height: 100%;
-      overflow: hidden;
-      width: 100%;
-      box-sizing: border-box;
-      max-width: 100%;
-      /* Preserve original formatting - no text wrapping modifications */
-      text-indent: 0;
-      word-break: normal;
-      hyphens: none;
-    }
+                                         #unscramble { 
+       white-space: pre-wrap; 
+       font-size: 1.8rem;
+       line-height: 1.5;
+       word-wrap: break-word;
+       overflow-wrap: break-word;
+       height: 100%;
+       overflow: hidden;
+       width: 100%;
+       box-sizing: border-box;
+       max-width: 100%;
+       /* Preserve original formatting - no text wrapping modifications */
+       text-indent: 0;
+       word-break: normal;
+       hyphens: none;
+     }
      
      /* Handle indented line wrapping - preserve indentation for continuation lines */
      #unscramble .indented-line {
@@ -291,16 +291,17 @@ z-index: 1;
       font-size: 0.9rem;
     }
 
-    #nav { 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 3vh 0 1vh; 
-      font-size: 1.5rem;
-      min-height: 5vh;
-      position: relative;
-      gap: 4vw;
-    }
+         #nav { 
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: 3vh 0 1vh; 
+       font-size: 1.8rem;
+       min-height: 5vh;
+       position: relative;
+       gap: 4vw;
+       text-align: center;
+     }
     #nav span { cursor:pointer; user-select:none; padding:0 1em; }
           #nav-msg { 
       flex-grow:1; 
@@ -1270,14 +1271,14 @@ scrambleFastChunks(el, pages[pageIndex], () => {
     // Font cycling functionality - UPDATED WITH 6 FONTS
     let currentFontIndex = 3; // Start with Crisp (index 3)
     let currentFontSize = 1.0; // Size multiplier (1.0 = 100% of base size)
-    const fonts = [
-      { family: 'monospace', size: '2.2rem' },
-      { family: 'IBM3270', size: '2.2rem' },  // All fonts now use same base size (2x the original 1.1rem)
-      { family: 'PixelCarnageMono', size: '2.2rem' },
-      { family: 'Crisp', size: '2.2rem' },
-      { family: 'ProggyCleanCE', size: '2.2rem' },
-      { family: 'ProggySquare', size: '2.2rem' }
-    ];
+         const fonts = [
+       { family: 'monospace', size: '1.8rem' },
+       { family: 'IBM3270', size: '1.8rem' },  // All fonts now use same base size
+       { family: 'PixelCarnageMono', size: '1.8rem' },
+       { family: 'Crisp', size: '1.8rem' },
+       { family: 'ProggyCleanCE', size: '1.8rem' },
+       { family: 'ProggySquare', size: '1.8rem' }
+     ];
     
     function cycleFontForward() {
       currentFontIndex = (currentFontIndex + 1) % fonts.length;
@@ -1345,12 +1346,12 @@ scrambleFastChunks(el, pages[pageIndex], () => {
       console.log('Font size increased to:', (currentFontSize * 100).toFixed(0) + '%');
     }
     
-    function decreaseFontSize() {
-      currentFontSize = Math.max(currentFontSize - 0.1, 0.8); // Min 80%, 10% increments
-      applyCurrentFont();
-      updateHelpDisplays();
-      console.log('Font size decreased to:', (currentFontSize * 100).toFixed(0) + '%');
-    }
+         function decreaseFontSize() {
+       currentFontSize = Math.max(currentFontSize - 0.1, 0.3); // Min 30%, 10% increments
+       applyCurrentFont();
+       updateHelpDisplays();
+       console.log('Font size decreased to:', (currentFontSize * 100).toFixed(0) + '%');
+     }
     
     function resetFontSize() {
       currentFontSize = 1.0; // Reset to 100% (base size)

@@ -495,7 +495,7 @@ z-index: 2 !important;
       <div id="help-close">×</div>
       <div id="help-text">
         <strong>FONT</strong><br>
-        > 1/2/3 FONT COLOURS<br>
+        > 1/2/3/4/5 FONT COLOURS<br>
         > B/N CYCLE FONTS<br>
         &nbsp;&nbsp;&nbsp;&nbsp;CURRENT FONT: <span id="current-font-display">monospace</span><br>
         > +/- FONT SIZE<br>
@@ -1485,7 +1485,7 @@ document.exitFullscreen();
       const navNext = document.getElementById('nav-next');
       const terminals = [document.getElementById('unscramble'), document.getElementById('prompt'), document.getElementById('nav-msg'), navPrev, navNext, document.getElementById('page-counter')];
       let colorIndex=2; // Default to soft green (option 3)
-      const colors=['#CCCCCC','#00FF00','#66FF66'];
+      const colors=['#CCCCCC','#00FF00','#66FF66','#00DD00','#44AA44'];
       function apply(){
 terminals.forEach(el=>{ if(!el) return;
   el.style.color = colors[colorIndex];
@@ -1530,7 +1530,7 @@ if (customCursor) {
 }
       }
       document.addEventListener('keydown', (e)=>{
-if (e.key==='1'||e.key==='2'||e.key==='3'){ colorIndex=parseInt(e.key,10)-1; apply(); }
+if (e.key==='1'||e.key==='2'||e.key==='3'||e.key==='4'||e.key==='5'){ colorIndex=parseInt(e.key,10)-1; apply(); }
       });
       apply();
     })();
